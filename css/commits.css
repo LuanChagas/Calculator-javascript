@@ -1,0 +1,40 @@
+body{
+    background: #E95669;
+    font-family: monospace;
+}
+
+.commits{
+    max-width: 290px;
+    margin: 20px auto 5px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.commits-title{
+    background: #B9DFEE;
+    border-radius: 20%;
+    box-shadow: 0 9px 9px 5px rgba(0, 0, 0,.2);
+}
+
+.commits-title h2{
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.commits-list {
+    align-self: center;
+}
+
+.commits-list li{
+    background:  #B9DFEE;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 20%;
+    box-shadow: 0 9px 9px 5px rgba(0, 0, 0,0.2);
+}
+
+.commits-list li h3{
+    font-size: 16px;
+}
