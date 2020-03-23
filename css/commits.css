@@ -1,6 +1,6 @@
 body{
     background: #E95669;
-    font-family: monospace;
+    font-family: 'Roboto';
 }
 
 .commits{
@@ -15,14 +15,18 @@ body{
     background: #B9DFEE;
     border-radius: 20%;
     box-shadow: 0 9px 9px 5px rgba(0, 0, 0,.2);
+    display: flex;
+    justify-content: center;
 }
 
 .commits-title h2{
     padding: 20px;
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
 }
-
+.commits-title img{
+    max-width: 17px;
+}
 .commits-list {
     align-self: center;
 }
@@ -33,6 +37,7 @@ body{
     padding: 10px;
     border-radius: 20%;
     box-shadow: 0 9px 9px 5px rgba(0, 0, 0,0.2);
+    
 }
 
 .commits-list li h3{

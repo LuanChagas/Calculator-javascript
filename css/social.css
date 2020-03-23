@@ -6,10 +6,6 @@ footer{
     border-radius: 20%;
 }
 
-.container-footer{
-    
-}
-
 .container-footer ul{
     display: grid;
     grid-template-columns: repeat(4,minmax(25px, 40px));
@@ -21,3 +17,5 @@ footer{
     padding: 20px  0;
     border-radius: 40%;
 }
+
+
