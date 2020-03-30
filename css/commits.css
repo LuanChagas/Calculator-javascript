@@ -25,21 +25,30 @@ body{
     font-size: 26px;
 }
 .commits-title img{
-    max-width: 17px;
-}
-.commits-list {
-    align-self: center;
+    max-width: 10px;
+   margin-top: 5px;
 }
 
 .commits-list li{
+    display: flex;
+    min-height: 40px;
+    flex-direction: column;
     background:  #B9DFEE;
     margin-top: 20px;
     padding: 10px;
     border-radius: 20%;
     box-shadow: 0 9px 9px 5px rgba(0, 0, 0,0.2);
-    
+}
+.commits-list  span{
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
-.commits-list li h3{
-    font-size: 16px;
+.commits-list  h3{
+    font-size: 15px;
+    text-align: center;
 }
+
+
+
