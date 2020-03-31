@@ -1,4 +1,7 @@
-import doRequest from './modules/request.js';
+import DoRequest from './modules/request.js';
+//import DropDown from './modules/dropwdown.js';
 
-    const req = new doRequest();
+
+    new DoRequest();
+   // new DropDown();
 

@@ -1,9 +1,11 @@
 import Commit from './commits.js'
 import dateCommit from './date.js'
 import Logo from './logo.js'
+import DropDown from './dropwdown.js';
 
 const commits = new Commit();
 const logo = new Logo();
+
 
 export default class doRequest {
     constructor() {
@@ -25,7 +27,6 @@ export default class doRequest {
     }
 
     async makeRequestImage() {
-        console.log('faz splash')
         try {
             let response = await (await fetch(this.urlImage));
             let data = await (await response.json());
@@ -46,7 +47,7 @@ export default class doRequest {
             data.message = dataJson[i].commit.message;
             this.dataCommit.push(data);
         }
-        console.log(this.dataCommit)
-        await commits.creatingElement(this.dataCommit);
+        commits.creatingElement(this.dataCommit);
+         new DropDown()
     }
 }
