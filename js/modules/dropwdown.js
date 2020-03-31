@@ -27,13 +27,13 @@ export default class Dropdown {
         } else {
             const len = this.li.length - 1
             for (let i = len; i >= 0; --i) {
-                count += 100;
+                count += 115;
                 setTimeout(() => {
                     this.li[i].classList.remove('deslize');
                     this.li[i].classList.add('backdeslize');
                     setTimeout(() => {
                         this.li[i].style.display = 'none';
-                    }, count - 109)
+                    }, count )
                 }, count)
             }
         }
