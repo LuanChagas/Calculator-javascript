@@ -1,9 +1,9 @@
-body{
+body {
     background: #E95669;
     font-family: 'Roboto';
 }
 
-.commits{
+.commits {
     max-width: 290px;
     width: 100%;
     margin: 20px auto 5px auto;
@@ -12,98 +12,98 @@ body{
     flex-direction: column;
 }
 
-.commits-title{
+.commits-title {
     background: #B9DFEE;
     border-radius: 20%;
-    box-shadow: 0 9px 9px 5px rgba(0, 0, 0,.2);
+    box-shadow: 0 9px 9px 5px rgba(0, 0, 0, .2);
     display: flex;
     justify-content: center;
 }
-.commits-list{
-    display: none;
+
+.commits-list {
+ 
 }
 
-.commits-title h2{
+.commits-title h2 {
     padding: 20px;
     text-align: center;
     font-size: 26px;
 }
-.commits-title img{
+
+.commits-title img {
     max-width: 10px;
-   margin-top: 5px;
-   margin-right: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 
-.back{
+.back {
     animation: rotationNormalize 1s forwards;
 }
 
-.transform{
+.transform {
     animation: rotation 500ms forwards;
 }
 
 @keyframes rotation {
-    from{
-            transform: rotate(0deg);
+    from {
+        transform: rotate(0deg);
     }
-    to{
+
+    to {
         transform: rotate(270deg);
     }
 }
 
 @keyframes rotationNormalize {
-    from{
+    from {
         transform: rotate(270deg);
-}
-   
-    to{
-            transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(0deg);
     }
 }
 
-.commits-list li{
+.commits-list li {
     display: none;
     min-width: 290px;
     min-height: 40px;
-    margin-bottom:40px ;
+    margin-bottom: 40px;
     flex-direction: column;
-    background:  #B9DFEE;
+    background: #B9DFEE;
     padding: 10px 0 10px 0;
     border-radius: 20%;
-    box-shadow: 0 9px 9px 5px rgba(0, 0, 0,0.2);
+    box-shadow: 0 9px 9px 5px rgba(0, 0, 0, 0.2);
 }
 
+.backdeslize {
+    animation: backSlidein 1s forwards;
+}
 
-.deslize{
+.deslize {
     animation: slidein 2s forwards;
 }
 
-
-
-
 @keyframes slidein {
     from {
-        display: none;
         opacity: 10%;
-        transform: translate3d(0,-20px,0);
+        transform: translate3d(0, -20px, 0);
     }
-  
-    to {
-        transform: translate3d(0,20px,0);
-    }
-  }
 
-  @keyframes backSlidein {
-    from {
-        display: flex;
-        margin-top: 20px;
-      }
     to {
-        transform: translate3d(0,-20px,0);
+        transform: translate3d(0, 20px, 0);
     }
-  }
+}
 
-.commits-list  span{
+@keyframes backSlidein {
+
+    to {
+        opacity: 10%;
+        transform: translate3d(0, -40px, 0);
+    }
+}
+
+.commits-list span {
     margin-bottom: 10px;
     font-size: 15px;
     font-weight: bold;
@@ -111,18 +111,12 @@ body{
     align-self: center;
 }
 
-.commits-list  h3{
+.commits-list h3 {
     font-size: 15px;
     text-align: center;
     margin-bottom: 20px;
 }
+
 .active{
-    display: flex;
+
 }
-
-.inactives{
-    display: none;
-}
-
-
-

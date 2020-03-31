@@ -1,35 +1,44 @@
 export default class Dropdown {
     constructor() {
-        this.ul = document.querySelector('.commits-list');
+        this.ul = document.querySelector('.commits-list ul');
         this.titleDrop = document.querySelector('.commits-title')
         this.img = document.querySelector('.commits-title img')
         this.li = document.querySelectorAll('.commits-list li');
-        this.events = ['touchstart','click']
+        this.events = ['touchstart', 'click']
 
         this.dropdown()
     }
 
     deslize() {
-        let i = 0;
+        this.ul.classList.toggle('active')
+
+        let count = 0;
+
         if (this.ul.classList.contains('active')) {
             this.li.forEach((e) => {
-                i = i + 109;
+                count = count + 109;
                 setTimeout(() => {
                     e.style.display = 'flex';
+                    e.classList.remove('backdeslize')
                     e.classList.add('deslize')
-                }, i)
+
+                }, count)
             })
         } else {
-            this.li.forEach((e) => {
-                e.style.display = 'none';
-                e.classList.remove('deslize')
-            })
+            const len = this.li.length - 1
+            for (let i = len; i >= 0; --i) {
+                count += 100;
+                setTimeout(() => {
+                    this.li[i].classList.remove('deslize');
+                    this.li[i].classList.add('backdeslize');
+                    setTimeout(() => {
+                        this.li[i].style.display = 'none';
+                    }, count - 109)
+                }, count)
+            }
         }
     }
 
-    showUl() {
-        this.ul.classList.toggle('active')
-    }
 
     rotationImage() {
         if (this.img.classList.contains('transform')) {
@@ -44,9 +53,7 @@ export default class Dropdown {
     dropdown() {
         this.titleDrop.style.cursor = 'pointer';
         this.titleDrop.addEventListener('click', (e) => {
-            console.log('passou aqui')
             this.rotationImage()
-            this.showUl()
             this.deslize()
         })
     }
