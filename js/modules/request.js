@@ -13,7 +13,6 @@ export default class doRequest {
         this.urlImage = 'https://api.github.com/users/luanChagas'
         this.dataCommit = [];
         this.splash = false;
-
         this.data();
     }
     async makeRequestCommit() {

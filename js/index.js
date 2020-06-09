@@ -1,9 +1,11 @@
 import DoRequest from './modules/request.js';
-//import DropDown from './modules/dropwdown.js';
+import DoCalculator from './modules/calculator.js';
 
 
-    new DoRequest();
-   // new DropDown();
+   // new DoRequest();
+   new DoCalculator();
+   
+
  
 
    

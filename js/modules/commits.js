@@ -7,7 +7,7 @@ export default class Commits {
        return document.createElement('li');
    }
 
-   creatingElement(data){
+  creatingElement(data){
         for(let i = 0;i < data.length; i++){
             let li = this.createLi();
             let h3 = document.createElement('h3');
