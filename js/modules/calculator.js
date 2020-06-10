@@ -1,3 +1,7 @@
+import calculation from './doingCalculation.js';
+
+let calc = new calculation;
+
 
 export default class Calculator {
 
@@ -22,6 +26,7 @@ export default class Calculator {
         this.btn.forEach(bt => {
             bt.addEventListener('click', (e) => {
                 this.addEffectBtn(bt)
+                calc.showDisplay(bt.id)
                 setTimeout(() => {
                     this.removeEffectBtn(bt)
                 }, 100)
