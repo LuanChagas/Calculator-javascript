@@ -16,13 +16,11 @@ export default class DoCalculation {
 
     showScreen() {
 
-            if(!this.show.length){
-                this.display.innerHTML = 0
-            }else{
-                this.display.innerHTML = this.show.join('')
-            }
-       
-
+        if (!this.show.length) {
+            this.display.innerHTML = 0
+        } else {
+            this.display.innerHTML = this.show.join('')
+        }
     }
 
     clearScreen() {
@@ -98,29 +96,33 @@ export default class DoCalculation {
     }
 
     numbersChoice(value) {
-
+        let ver = this.show.join('')
+        console.log(ver)
+      
         if (value) {
             console.log("aqui")
-            this.show.push(value)
-            this.cal.push(value)
-            this.showScreen()
-            console.log(this.cal)
+            if(ver.length <= 9){
+                this.show.push(value)
+                this.cal.push(value)
+                this.showScreen()
+                console.log(this.cal)
+            }
+            
         }
-
-
+        
     }
 
-    doPercent(){
-        
-            if(!this.lastIsOper()){
-                let res = eval(this.show.join(''))
-                this.result()
-                res = 
-                this.display.innerHTML = res/100
-                this.show = [res]
-            }
+    doPercent() {
+
+        if (!this.lastIsOper()) {
+            let res = eval(this.show.join(''))
+            this.result()
+            res =
+                this.display.innerHTML = res / 100
+            this.show = [res]
         }
-    
+    }
+
 
     cleanRegis() {
         this.cal.pop()
@@ -145,17 +147,18 @@ export default class DoCalculation {
     choice(value) {
 
 
-        if (this.numbers.includes(value)) {
+     
+        if (this.numbers.includes(value)) { 
             this.numbersChoice(value)
         } else if (this.clean === value) {
             this.clearScreen()
         } else if (this.oper.includes(value)) {
             this.operator(value)
-        } else if (value  === this.equalsCalc) {
+        } else if (value === this.equalsCalc) {
             this.result()
-        } else if (value ===  this.ce) {
+        } else if (value === this.ce) {
             this.cleanRegis()
-        }else if(value === this.perc){
+        } else if (value === this.perc) {
             this.doPercent(value)
         }
     }
