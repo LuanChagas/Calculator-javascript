@@ -1,79 +1,79 @@
-.container-calculator{
-    margin: 20px auto;
-    max-width: 290px;
-    background: #B9DFEE;
-    display: grid;
-    grid-template-columns: minmax(210px,290px);
-    grid-template-rows: 150px 1fr;
-    row-gap: 10px;
-    box-shadow: 0 9px 9px 5px rgba(0, 0, 0,0.2);
-    border-radius: 10%;
+.container-calculator {
+  margin: 20px auto;
+  max-width: 290px;
+  background: #b9dfee;
+  display: grid;
+  grid-template-columns: minmax(210px, 290px);
+  grid-template-rows: 150px 1fr;
+  row-gap: 10px;
+  box-shadow: 0 9px 9px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10%;
 }
 
-.display-numbers{
-    justify-self: end;
-    display: grid;
+.display-numbers-content {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  height: 7.5rem;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
-.display-numbers span{
-    align-self: end;
-    margin: 0 30px;
-    font-size: 40px;
-    
+.display-numbers h3 {
+  font-size: 36px;
 }
 
-.display-btns{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin-bottom: 20px;
-    gap: 20px;
-    justify-self: center;
+.display-btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 20px;
+  gap: 20px;
+  justify-self: center;
 }
 
-.btn{
-    width: 50px;
-    height: 50px;
-    display: flex;
-    border-radius: 40%;
-    box-shadow: 0 9px 9px -2px rgba(0, 0, 0, .2)
+.btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  border-radius: 40%;
+  box-shadow: 0 9px 9px -2px rgba(0, 0, 0, 0.2);
 }
 
-.btn.btnClicked{
-    animation: clicked 2ms forwards;
+.btn.btnClicked {
+  animation: clicked 2ms forwards;
 }
 
-@keyframes clicked{
-    to{
-        box-shadow: inset 0 8px 6px 10px rgba(0, 0, 0, .2);
-    }
+@keyframes clicked {
+  to {
+    box-shadow: inset 0 8px 6px 10px rgba(0, 0, 0, 0.2);
+  }
 }
 
-.btn span{
-    margin:  auto;
-    align-self: center;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: default;
-}
-
-.brown{
-    background: #DF8433;
+.btn span {
+  margin: auto;
+  align-self: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: default;
 }
 
 .brown {
-    background: rgb(238, 119, 15);
+  background: #df8433;
 }
 
-.red{
-    background: #E65232;
+.brown {
+  background: rgb(238, 119, 15);
 }
 
-.yellow{
-    background: #EEBF36;
+.red {
+  background: #e65232;
 }
 
-.zero{
-    grid-column: 1 / 3;
-    width: 100%;
-    border-radius: 20px;
+.yellow {
+  background: #eebf36;
+}
+
+.zero {
+  grid-column: 1 / 3;
+  width: 100%;
+  border-radius: 20px;
 }

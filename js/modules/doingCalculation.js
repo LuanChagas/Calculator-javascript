@@ -1,6 +1,6 @@
 export default class DoCalculation {
   constructor() {
-    this.display = document.querySelector(".display-numbers span");
+    this.display = document.querySelector(".display-numbers-content h3");
 
     this.oper = ["/", "*", "-", "+"];
     this.numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."];
@@ -87,18 +87,18 @@ export default class DoCalculation {
   numbersChoice(value) {
     let ver = this.show.join("");
     if (value) {
-      if (ver.length <= 9) {
-          if(value === '.' && this.display.innerHTML.includes('.')){
-            this.showScreen();
-      }else {
-        this.show.push(value);
-        this.cal.push(value);
-        this.showScreen();
+      if (ver.length <= 36) {
+        if (value === "." && this.display.innerHTML.includes(".")) {
+          this.showScreen();
+        } else {
+          this.show.push(value);
+          this.cal.push(value);
+          this.showScreen();
+        }
       }
+      console.log(this.display.innerHTML);
     }
-    console.log(this.display.innerHTML);
   }
-}
 
   doPercent() {
     if (!this.lastIsOper()) {
@@ -120,13 +120,17 @@ export default class DoCalculation {
   }
 
   result() {
-    let resul = eval(this.show.join(""));
-    console.log(resul);
-    if (resul != undefined) {
-      this.cal = [];
-      this.cal.push(resul);
-      this.display.innerHTML = resul;
-      this.show = [resul];
+    try {
+      let resul = eval(this.show.join(""));
+      console.log(resul);
+      if (resul != undefined) {
+        this.cal = [];
+        this.cal.push(resul);
+        this.display.innerHTML = resul;
+        this.show = [resul];
+      }
+    } catch (e) {
+      console.log(e);
     }
   }
 
